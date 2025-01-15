@@ -40,7 +40,7 @@ if (!$args[0]) {
 	"init" {
             Write-Host "Initializing private Ethereum PoW node..."
             Start-Sleep -Seconds 2 
-            .\geth.exe --datadir blockchain init uzheth.json
+            .\geth.exe --datadir blockchain init genesis.json
             Copy-Item "static-nodes.json" -Destination "blockchain\geth"
             break
         }
