@@ -8,6 +8,8 @@ Install a Metamask browser extension which is available at [https://metamask.io/
 
 Create a new wallet in Metamask, save the seed phrase, save the account address which you will use later for mining.
 
+Create a custom network and add `http://185.252.234.250:8545` as the default RPC URL.
+
 ## Running your own node - Linux and Mac instructions
 
 Download the installation script:
@@ -127,10 +129,7 @@ for (var i = 0; i <= latestBlock; i++) {
 
 ## Deploying an ERC-20 token
 
-For deploying an ERC-20 token use the Remix web-based IDE:
-```
-https://remix.ethereum.org/
-```
+For deploying an ERC-20 token use the Remix web-based IDE available at [https://remix.ethereum.org/](https://remix.ethereum.org/).
 
 Copy the following code into the Remix editor:
 ```
@@ -151,4 +150,8 @@ contract MatijaToken is ERC20, Ownable {
     }
 }
 ```
+
+Change the compiler version to `0.8.18` and compile.
+
+Switch to the `Deploy` tab, change the `Environment` to `Injected provider - Metamask` and deploy your contract.
 
