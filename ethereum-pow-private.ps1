@@ -7,7 +7,7 @@
 # mkdir ethereum-pow-private
 # cd ethereum-pow-private
 # Download the ethereum-pow-private.ps1 script:
-# Invoke-WebRequest "https://gitlab.ifi.uzh.ch/-/snippets/31/raw/main/uzhethereum.ps1" -UseBasicParsing -OutFile "ethereum-pow-private.ps1"
+# Invoke-WebRequest "https://raw.githubusercontent.com/matijapiskorec/ethereum-pow-private/refs/heads/main/ethereum-pow-private.ps1" -UseBasicParsing -OutFile "ethereum-pow-private.ps1"
 # Now you can run the script:
 # .\ethereum-pow-private.ps1
 # Allow network access if Windows Firewall prompts you, usually after you run the node.
@@ -33,8 +33,8 @@ if (!$args[0]) {
             Copy-Item "$gethVersion\$gethVersion\geth.exe" -Destination "."
             Write-Host "Downloading genesis template file and static node file for private Ethereum PoW network..."
             Start-Sleep -Seconds 2 
-            Invoke-WebRequest "https://gitlab.uzh.ch/luca.ambrosini/go-ethereum/-/wikis/uploads/f36cd66fb248d69cdcaf6b5b27685d5b/uzheth.json" -OutFile "genesis.json"
-            Invoke-WebRequest "https://gitlab.ifi.uzh.ch/-/snippets/28/raw/main/static-nodes.json" -OutFile "static-nodes.json"
+            Invoke-WebRequest "https://raw.githubusercontent.com/matijapiskorec/ethereum-pow-private/refs/heads/main/genesis.json" -OutFile "genesis.json"
+            Invoke-WebRequest "https://raw.githubusercontent.com/matijapiskorec/ethereum-pow-private/refs/heads/main/static-nodes.json" -OutFile "static-nodes.json"
             break
         }
 	"init" {

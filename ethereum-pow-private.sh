@@ -22,23 +22,20 @@ else
                         sleep 2;
                         wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.15-8be800ff.tar.gz;
                         tar xvzf geth-linux-amd64-1.10.15-8be800ff.tar.gz geth-linux-amd64-1.10.15-8be800ff/geth --strip-components 1;
-                        echo "Downloading template genesis file for initializing private Ethereum PoW network..."
-                        sleep 2;
-                        curl -O https://gitlab.uzh.ch/luca.ambrosini/go-ethereum/-/wikis/uploads/f36cd66fb248d69cdcaf6b5b27685d5b/uzheth.json;
                         ;;
                     mac)
                         echo "Downloading Go Ethereum client for Mac OS..."
                         sleep 2;
                         wget https://gethstore.blob.core.windows.net/builds/geth-darwin-amd64-1.10.15-8be800ff.tar.gz;
                         tar xvzf geth-darwin-amd64-1.10.15-8be800ff.tar.gz --strip-components 1;
-                        echo "Downloading template genesis file for initializing private Ethereum PoW network..."
-                        sleep 2;
-                        curl -O https://gitlab.uzh.ch/luca.ambrosini/go-ethereum/-/wikis/uploads/f36cd66fb248d69cdcaf6b5b27685d5b/uzheth.json;
                         ;;
                 esac
+                echo "Downloading template genesis file for initializing private Ethereum PoW network..."
+                sleep 2;
+                curl -O https://raw.githubusercontent.com/matijapiskorec/ethereum-pow-private/refs/heads/main/genesis.json;
                 echo "Downloading static node file for the private Ethereum PoW network..."
                 sleep 2;
-                wget https://gitlab.ifi.uzh.ch/-/snippets/28/raw/main/static-nodes.json;
+                wget https://raw.githubusercontent.com/matijapiskorec/ethereum-pow-private/refs/heads/main/static-nodes.json;
             fi
 			;;
 		init)
