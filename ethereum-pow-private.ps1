@@ -11,7 +11,7 @@
 # Now you can run the script:
 # .\ethereum-pow-private.ps1
 # Allow network access if Windows Firewall prompts you, usually after you run the node.
-# To attach to the interactive Javascript console run the donwloaded geth.exe binary with the following parameters:
+# To attach to the interactive Javascript console run the downloaded geth.exe binary with the following parameters:
 # .\geth.exe --datadir blockchain attach http://localhost:8545
 
 $gethVersion = "geth-windows-amd64-1.10.15-8be800ff"
