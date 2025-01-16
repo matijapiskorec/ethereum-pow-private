@@ -74,8 +74,8 @@ Now you can run the script to get usage instructions:
 
 Otherwise the following commands are similar as for Linux and Mac users:
 ```
-./ethereum-pow-private.sh download
-./ethereum-pow-private.sh init
+.\ethereum-pow-private.ps1 download
+.\ethereum-pow-private.ps1 init
 ``` 
 
 Finally, run your node in mining mode by providing etherbase address or without mining:
